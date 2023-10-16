@@ -12,13 +12,17 @@ import Menu from './Menu';
 
 const MobileNavbar = () => {
   const navigate = useNavigate();
-  const { logedIn } = useContext(LogedInUser)
+  const { logedIn , setLogedIn } = useContext(LogedInUser)
   const [open, setOpen] = useState(false);
   const [openMenuModal, setOpenMenuModal] = useState(false);
 
+  if (sessionStorage.getItem('userInfo')) {
+    setLogedIn(true);
+}
+
   const openDialog = () => {
     if (logedIn) {
-        navigate('/myProfilePage')
+        navigate('/myProfilePage');
     } else {
         setOpen(true);
     }
