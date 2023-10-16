@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from "../../assests/logo-croma.svg";
 import { IoMenuOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci"
@@ -6,17 +6,24 @@ import { FaShoppingCart, FaUser } from "react-icons/fa"
 import { useNavigate } from 'react-router-dom';
 import { useFilterContext } from '../../context/filterContext';
 import LoginDialog from '../login/LoginDialog';
+import { LogedInUser } from '../../App';
 import { Modal } from '@mui/material';
 import Menu from './Menu';
 
 const MobileNavbar = () => {
   const navigate = useNavigate();
+  const { logedIn } = useContext(LogedInUser)
   const [open, setOpen] = useState(false);
   const [openMenuModal, setOpenMenuModal] = useState(false);
 
   const openDialog = () => {
-    setOpen(true);
-  }
+    if (logedIn) {
+        navigate('/myProfilePage')
+    } else {
+        setOpen(true);
+    }
+
+}
 
   const {
     filters: { text },
