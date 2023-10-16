@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { FiHeart } from 'react-icons/fi';
+import { AiFillStar } from 'react-icons/ai';
 
 const Cards = ({product}) => {
     const {_id, displayImage, name, price } = product;

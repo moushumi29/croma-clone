@@ -3,7 +3,6 @@ import Box from '../../Box';
 import Cards from '../page/Cards';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { getRandomInt } from '../helper/RandomStars';
 
 const TrendingProduct = () => {
   const [products, setProducts] = useState([]);
