@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 import Box from '../../Box';
 
 const BuyNow = () => {
+    document.body.style.backgroundColor = "#191919";
+    document.body.style.color = "white";
     const navigate = useNavigate();
     const { _id } = useParams();
     const ProjectId = 'j7qoo6mywx67';
@@ -104,6 +106,7 @@ const BuyNow = () => {
                 theme:"dark"
             })
         }
+        return error.length === 0;
     }
 
     const handleBuyNow = (e) => {
@@ -112,6 +115,7 @@ const BuyNow = () => {
             buyNow();
             navigate('/thankyouPage');
         }
+    
         
     }
   return (

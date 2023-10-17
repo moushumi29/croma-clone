@@ -72,12 +72,16 @@ const WishListCard = ({ wishList, setWishListData }) => {
         deleteItemfronCart();
       }
     return (
-        <div className='wishlist-wrapper' style={{}}>
+        <div className='wishlist-wrapper'>
             <div>
                 <img src={displayImage} alt={name} className='order-image' />
             </div>
             <div>
-                <div style={{ fontSize: "18px", fontWeight: "600", marginBottom: "20px" }}>{name}</div>
+                <div style={{ fontSize: "18px", fontWeight: "600", marginBottom: "20px" }}>
+                  {name.length > 50 ? 
+                <span>{name.slice(0, 50)}...</span> : 
+                <span>{name}</span> } 
+                </div>
                 <div style={{marginBottom:"20px"}}>
                     <span className='price-cart'>&#x20B9; {formatIndianRupee(price)}</span>
 
@@ -95,7 +99,7 @@ const WishListCard = ({ wishList, setWishListData }) => {
                     <AiFillStar style={{ color: "gray" }} />
                 </div>
             </div>
-            <div style={{display:"flex", flexDirection:"column"}}>
+            <div  className='wishlist-buttons'>
                 <button className='addToCart-btn' onClick={handleAddtoCart}>Add to Cart</button>
                 <button className='deleteCart-btn' onClick={handleDeletClick}>Delete</button>
             </div>

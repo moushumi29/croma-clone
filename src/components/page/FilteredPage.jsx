@@ -5,6 +5,8 @@ import FilterProductCard from '../helper/FilterProductCard'
 import Sort from '../helper/Sort'
 
 const FilteredPage = () => {
+  document.body.style.backgroundColor = "#191919";
+  document.body.style.color = "white";
   const { filter_products,
     filters: {
       text, price, maxPrice, minPrice

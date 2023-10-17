@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import OrderCard from '../helper/OrderCard';
 
 const MyOrdersPage = () => {
+    document.body.style.backgroundColor = "#191919";
+    document.body.style.color = "white";
     const navigate = useNavigate();
     const ProjectId = 'j7qoo6mywx67';
     const [orderHistory, setOrderHistory] = useState([]);

@@ -12,7 +12,7 @@ import Menu from './Menu';
 
 const MobileNavbar = () => {
   const navigate = useNavigate();
-  const { logedIn , setLogedIn } = useContext(LogedInUser)
+  const { logedIn , setLogedIn, cartValue } = useContext(LogedInUser)
   const [open, setOpen] = useState(false);
   const [openMenuModal, setOpenMenuModal] = useState(false);
 
@@ -60,7 +60,7 @@ const MobileNavbar = () => {
           </div>
           <div className='cart'>
             <FaShoppingCart style={{ fontSize: "18px" }} />
-            <p>0</p>
+            <p>{cartValue}</p>
           </div>
         </div>
       </div>

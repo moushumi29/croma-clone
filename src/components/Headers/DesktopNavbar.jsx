@@ -56,7 +56,7 @@ const DesktopNavbar = () => {
         <Box>
             <div className='desktop-navbar'>
                 <div className='left-side'>
-                    <div className='image-container'>
+                    <div className='image-container' onClick={()=> navigate('/')}>
                         <img src={logo} alt='croma-logo' />
                     </div>
                     <div className='menu-container' onClick={() => setOpenMenuModal(true)}>

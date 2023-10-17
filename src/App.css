@@ -184,6 +184,7 @@ body{
 }
 .home-container{
     background-color: #191919;
+    color: white;
 }
 .bank-banner{
     display: flex;
@@ -760,6 +761,10 @@ body{
     align-items: center;
     padding:"50px"
 }
+.wishlist-buttons{
+    position: absolute;
+    right: 200px;
+}
 .order-image{
     height: 200px;
     width: 200px;
@@ -772,6 +777,7 @@ body{
     align-items: center;
 }
 .addToCart-btn{
+    display: block;
     width: 200px;
     padding: 15px 0px;
     border: none;
@@ -788,6 +794,7 @@ body{
     background-color: #03b695;
 }
 .deleteCart-btn{
+    display: block;
     width: 200px;
     padding: 15px 0px;
     border: 1px solid white;
@@ -964,6 +971,9 @@ body{
         margin: 20px;
         padding: 10px 20px;
         /* padding: 20px; */
+    }
+    .wishlist-buttons{
+        position:static;
     }
     .order-wrapper{
         display: flex;

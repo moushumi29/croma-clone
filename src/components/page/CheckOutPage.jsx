@@ -6,6 +6,8 @@ import { formatIndianRupee } from '../helper/RandomStars';
 import { useNavigate } from 'react-router-dom';
 
 const CheckOutPage = () => {
+    document.body.style.backgroundColor = "#191919";
+    document.body.style.color = "white";
     const navigate = useNavigate();
     const { setCartValue } = useContext(LogedInUser);
     const ProjectId = 'j7qoo6mywx67';
@@ -153,6 +155,7 @@ const CheckOutPage = () => {
                 theme:"dark"
             })
         }
+        return error.length === 0;
     }
         
 

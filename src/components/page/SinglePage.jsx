@@ -73,6 +73,15 @@ const SinglePage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const handleBuyNow = () => {
+    if(!logedIn){
+      toast.error("Log In first",{
+        theme: "dark",
+      })
+    }else{
+      navigate(`/buyNowPage/${_id}`)
+    }
+  }
   const handleCartAddition = () => {
     if(!logedIn){
       toast.error("Log In first",{
@@ -133,7 +142,7 @@ const SinglePage = () => {
               </h5>
             </div>
             <div className='footer-btn'>
-              <button className='filled-btn' onClick={()=>navigate(`/buyNowPage/${_id}`)}>Buy Now</button>
+              <button className='filled-btn' onClick={handleBuyNow}>Buy Now</button>
               <button className='outline-btn' onClick={handleCartAddition}>Add to Cart</button>
             </div>
           </div>

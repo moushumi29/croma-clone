@@ -6,6 +6,8 @@ import { PiHeartStraight } from "react-icons/pi"
 import { useNavigate } from 'react-router-dom'
 
 const MyProfile = () => {
+    document.body.style.backgroundColor = "#191919";
+    document.body.style.color = "white";
     const navigate = useNavigate();
 
     return (

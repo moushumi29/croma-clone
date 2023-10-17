@@ -4,6 +4,8 @@ import Box from '../../Box'
 import Cards from './Cards';
 
 const BrandPage = () => {
+  document.body.style.backgroundColor = "#191919";
+  document.body.style.color = "white";
     const [products, setProducts] = useState([]);
     const ProjectId = 'j7qoo6mywx67';
     const { brand } = useParams();
@@ -24,7 +26,7 @@ const BrandPage = () => {
       }
 
       useEffect(() => {
-        fetchProductList();
+        fetchProductList(); 
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
   return (
