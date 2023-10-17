@@ -110,8 +110,9 @@ const BuyNow = () => {
         e.preventDefault();
         if(validateForm()){
             buyNow();
+            navigate('/thankyouPage');
         }
-        navigate('/thankyouPage')
+        
     }
   return (
     <div>

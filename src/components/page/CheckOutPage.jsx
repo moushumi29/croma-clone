@@ -167,8 +167,9 @@ const CheckOutPage = () => {
             })
             deleteCart();
             console.log('Form submitted successfully');
+            navigate('/thankyouPage')
         }
-        navigate('/thankyouPage')
+        
     }
     return (
         <div>
