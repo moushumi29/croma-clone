@@ -28,17 +28,17 @@ const Menu = () => {
             Shop by Category
         </Box>
     <Box>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/mobile')}>Mobile Phones</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/tv')}>Television</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/refrigerator')}>Refrigerator</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/tablet')}>Computer & Tablets</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/kitchenappliances')}>Kitchen Appliances</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/health')}>Health & Grooming</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/laptop')}>Laptop</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/travel')}>Accessories</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/audio')}>Home Theaters & Sound Bars</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/ac')}>Air Conditioners</Button>
-      <Button sx={buttonStyles} onClick={()=> navigate('/productList/washingMachine')}>Washing Machine</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/mobile')}>Mobile Phones</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/tv')}>Television</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/refrigerator')}>Refrigerator</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/tablet')}>Computer & Tablets</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/kitchenappliances')}>Kitchen Appliances</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/health')}>Health & Grooming</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/laptop')}>Laptop</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/travel')}>Accessories</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/audio')}>Home Theaters & Sound Bars</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/ac')}>Air Conditioners</Button>
+      <Button sx={buttonStyles} onClick={()=> navigate('/subCategory/washingMachine')}>Washing Machine</Button>
     </Box>
   </Box>
   </Box>

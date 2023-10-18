@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai';
 import { FiHeart } from 'react-icons/fi';
 import { toast } from 'react-toastify';
+import { LogedInUser } from '../../App';
 
 
 const ImageSlide = ({ img =[] , mainImage, _id}) => {
   const [focusedImage, setFocusedImage ] = useState(img[0]);
   const [fillHeart, setFillHeart] = useState(false);
   const ProjectId = 'j7qoo6mywx67';
+  const { logedIn, setLogedIn } = useContext(LogedInUser);
+  if(sessionStorage.getItem('userInfo')){
+    setLogedIn(true);
+  }
    
   //move to wishList
   const moveItemToWishList = async() =>{
@@ -46,8 +51,14 @@ const ImageSlide = ({ img =[] , mainImage, _id}) => {
     }
   }
   const handleWishList = () => {
+   if(!logedIn){
+    toast.error("Log In first", {
+      theme : "dark",
+    })
+   }else{
     moveItemToWishList();
     setFillHeart(true)
+   }
   }
   return (
     <div className='image-wrapper'>

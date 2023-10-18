@@ -47,7 +47,7 @@ const MobileNavbar = () => {
             <IoMenuOutline style={{ fontSize: "30px" }} />
 
           </div>
-          <Modal open={openMenuModal} onClose={() => setOpenMenuModal(false)} sx={{ top: '60px', left: "0%" }}>
+          <Modal open={openMenuModal} onClose={() => setOpenMenuModal(false)} sx={{ top: '40px', left: "0%" }}>
             <Menu />
           </Modal>
           <div className='image-container-mobile'>

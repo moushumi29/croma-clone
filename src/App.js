@@ -18,6 +18,7 @@ import MyRewardPage from './components/page/MyRewardPage';
 import MyWishLIstPage from './components/page/MyWishLIstPage';
 import BrandPage from './components/page/BrandPage';
 import ThankyouPage from './components/page/ThankyouPage';
+import SubCategory from './components/page/SubCategory';
 
 export const LogedInUser =  createContext();
 
@@ -31,6 +32,7 @@ return (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/productList/:title' element={<ProductPage />} />
+      <Route path='/subCategory/:title' element={<SubCategory />} />
       <Route path='/brandPage/:brand' element={<BrandPage/>} />
       <Route path='/singlePage/:_id' element={<SinglePage />} />
       <Route path='/signUpPage' element={<SignUpDialog />} />

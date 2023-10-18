@@ -2,7 +2,7 @@ import React from 'react'
 import { getRandomDecimal } from './RandomStars';
 import { AiFillStar } from 'react-icons/ai';
 import { FiHeart } from 'react-icons/fi';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
 
 const FilterProductCard = ({ product }) => {
@@ -31,7 +31,7 @@ const FilterProductCard = ({ product }) => {
                         </p>
                         <div className='location'>
                         <MdLocationOn style={{fontSize:"20px"}}/>
-                        <p style={{fontSize:"12px"}}>Delivery At: <Link style={{color:"#00e9bf"}}>Mumbai, 400049</Link></p>
+                        <p style={{fontSize:"12px"}}>Delivery At: <span style={{color:"#00e9bf", textDecoration:"underline"}}>Mumbai, 400049</span></p>
                         </div>
                     </div>
                 </div>

@@ -76,7 +76,7 @@ const WishListCard = ({ wishList, setWishListData }) => {
             <div>
                 <img src={displayImage} alt={name} className='order-image' />
             </div>
-            <div>
+            <div className='description-wishlist'>
                 <div style={{ fontSize: "18px", fontWeight: "600", marginBottom: "20px" }}>
                   {name.length > 50 ? 
                 <span>{name.slice(0, 50)}...</span> : 

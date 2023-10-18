@@ -39,7 +39,6 @@ const Products = () => {
               <NavLink to={`/productList/${item.title}`}>
                 <div key={item.id} className='product-container' >
                     <img src={item.url} alt='product'/>
-                    {/* <h4>{item.title}</h4> */}
                 </div>
                 </NavLink>
             )
