@@ -25,7 +25,7 @@ const AppProvider = ({children}) =>{
                     projectId: 'j7qoo6mywx67'
                   },
             });
-            const products = await res.data.data;
+            const products = await res.data?.data;
             // console.log(products)
             dispatch({ type: "SET_API_DATA", payload: products});
         }catch(error){

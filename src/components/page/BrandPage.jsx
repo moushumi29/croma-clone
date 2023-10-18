@@ -30,7 +30,7 @@ const BrandPage = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
   return (
-    <div>
+    <div style={{width:"100%"}}>
        <Box>
         <br/>
         <h1 style={{textAlign:"center"}}>Welcome to {brand} store</h1>

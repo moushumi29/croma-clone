@@ -45,7 +45,7 @@ const SinglePage = () => {
       const res = await fetch(`https://academics.newtonschool.co/api/v1/ecommerce/cart/${_id}`,{
         method: "PATCH",
         headers: {
-          projectId: { ProjectId },
+          projectId: ProjectId,
           Authorization : `Bearer ${authToken}`
         },
         body: JSON.stringify(body)

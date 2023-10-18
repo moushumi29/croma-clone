@@ -199,19 +199,19 @@ const CheckOutPage = () => {
 
                         <form>
                             <label htmlFor='street' className='label-checkout'>Street: </label>
-                            <input id='street' type='' placeholder='Enter your street' name='street' onChange={handleOnChange} className='input-checkout'/>
+                            <input id='street' type='text' placeholder='Enter your street' name='street' onChange={handleOnChange} className='input-checkout'/>
                             <br />
                             <label htmlFor='city' className='label-checkout'>City: </label>
-                            <input id='city' type='' placeholder='Enter your city' name='city' onChange={handleOnChange} className='input-checkout'/>
+                            <input id='city' type='text' placeholder='Enter your city' name='city' onChange={handleOnChange} className='input-checkout'/>
                             <br />
                             <label htmlFor='state' className='label-checkout'>State: </label>
-                            <input id='state' type='' placeholder='Enter your state' name='state' onChange={handleOnChange} className='input-checkout'/>
+                            <input id='state' type='text' placeholder='Enter your state' name='state' onChange={handleOnChange} className='input-checkout'/>
                             <br />
                             <label htmlFor='country' className='label-checkout'>Country: </label>
-                            <input id='country' type='' placeholder='Enter your country' name='country' onChange={handleOnChange} className='input-checkout'/>
+                            <input id='country' type='text' placeholder='Enter your country' name='country' onChange={handleOnChange} className='input-checkout'/>
                             <br />
                             <label htmlFor='zipCode' className='label-checkout'>Zipcode: </label>
-                            <input id='zipCode' type='' placeholder='Enter your Zipcode' name='zipCode' onChange={handleOnChange} className='input-checkout'/>
+                            <input id='zipCode' type='text' placeholder='Enter your Zipcode' name='zipCode' onChange={handleOnChange} className='input-checkout'/>
                             <br />
                             {error && <div className='error'>{error}</div>}
                             <button className='checkout-btn' onClick={handleSubmit}>Save Address</button>
