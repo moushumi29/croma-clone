@@ -68,7 +68,7 @@ const BuyNow = () => {
     const validateForm = () => {
         const newErrors = {};
 
-        if (!cardNumber.match(/^\d{16}$/)) {
+        if (!cardNumber.match(/^\d{4} \d{4} \d{4} \d{4}$/)) {
             newErrors.cardNumber = 'Enter a valid 16-digit card number.';
         }
 
@@ -84,14 +84,31 @@ const BuyNow = () => {
 
         return Object.keys(newErrors).length === 0;
     };
+    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+
+        const numericValue = value.replace(/\D/g, '');
+        let formattedValue = ''
+
         if (name === 'cardNumber') {
-            setCardNumber(value);
+            for (let i = 0; i < numericValue.length; i += 4) {
+                formattedValue += numericValue.slice(i, i + 4) + ' ';
+                
+              }
+              // Remove the extra space at the end
+         
+                formattedValue = formattedValue.trim();
+            
+              
+              
+            setCardNumber(formattedValue);
+            console.log(formattedValue);
+              
         } else if (name === 'expiryDate') {
             setExpiryDate(value);
         } else if (name === 'cvv') {
-            setCvv(value);
+            setCvv(numericValue);
         }
     };
 
@@ -127,16 +144,16 @@ const BuyNow = () => {
 
                 <form>
                     <label htmlFor='street' className='label-checkout'>Street: </label>
-                    <input id='street' type='' placeholder='Enter your street' name='street' onChange={handleOnChange} className='input-checkout'/>
+                    <input id='street' type='text' placeholder='Enter your street' name='street' onChange={handleOnChange} className='input-checkout'/>
                     <br />
                     <label htmlFor='city' className='label-checkout'>City: </label>
-                    <input id='city' type='' placeholder='Enter your city' name='city' onChange={handleOnChange} className='input-checkout'/>
+                    <input id='city' type='text' placeholder='Enter your city' name='city' onChange={handleOnChange} className='input-checkout'/>
                     <br />
                     <label htmlFor='state' className='label-checkout'>State: </label>
-                    <input id='state' type='' placeholder='Enter your state' name='state' onChange={handleOnChange} className='input-checkout'/>
+                    <input id='state' type='text' placeholder='Enter your state' name='state' onChange={handleOnChange} className='input-checkout'/>
                     <br />
                     <label htmlFor='country' className='label-checkout'>Country: </label>
-                    <input id='country' type='' placeholder='Enter your country' name='country' onChange={handleOnChange} className='input-checkout'/>
+                    <input id='country' type='text' placeholder='Enter your country' name='country' onChange={handleOnChange} className='input-checkout'/>
                     <br />
                     <label htmlFor='zipCode' className='label-checkout'>Zipcode: </label>
                     <input id='zipCode' type='' placeholder='Enter your Zipcode' name='zipCode' onChange={handleOnChange} className='input-checkout'/>
@@ -157,6 +174,7 @@ const BuyNow = () => {
                             name="cardNumber"
                             value={cardNumber}
                             placeholder='0000-0000-0000-0000'
+                            maxLength="19"
                             onChange={handleInputChange}
                             className='input-checkout'
                         />
@@ -169,6 +187,7 @@ const BuyNow = () => {
                             id="expiryDate"
                             name="expiryDate"
                             placeholder='mm/yy'
+                            maxLength="5"
                             value={expiryDate}
                             onChange={handleInputChange}
                             className='input-checkout'
@@ -177,7 +196,7 @@ const BuyNow = () => {
                     </div>
                     <div>
                         <label htmlFor="cvv" className='label-checkout'>CVV:</label>
-                        <input type="text" id="cvv" placeholder="000" name="cvv" value={cvv} onChange={handleInputChange} className='input-checkout' />
+                        <input type="text" id="cvv" placeholder="000" name="cvv" maxLength="3" value={cvv} onChange={handleInputChange} className='input-checkout' />
                         {errors.cvv && <div className="error">{errors.cvv}</div>}
                     </div>
                     <button className='checkout-btn' type="submit" onClick={handleBuyNow}>Pay Now</button>

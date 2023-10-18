@@ -117,7 +117,7 @@ const CheckOutPage = () => {
     const validateForm = () => {
         const newErrors = {};
 
-        if (!cardNumber.match(/^\d{16}$/)) {
+        if (!cardNumber.match(/^\d{4} \d{4} \d{4} \d{4}$/)) {
             newErrors.cardNumber = 'Enter a valid 16-digit card number.';
         }
 
@@ -135,12 +135,28 @@ const CheckOutPage = () => {
     };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+
+        const numericValue = value.replace(/\D/g, '');
+        let formattedValue = ''
+
         if (name === 'cardNumber') {
-            setCardNumber(value);
+            for (let i = 0; i < numericValue.length; i += 4) {
+                formattedValue += numericValue.slice(i, i + 4) + ' ';
+                
+              }
+              // Remove the extra space at the end
+         
+                formattedValue = formattedValue.trim();
+            
+              
+              
+            setCardNumber(formattedValue);
+            console.log(formattedValue);
+              
         } else if (name === 'expiryDate') {
             setExpiryDate(value);
         } else if (name === 'cvv') {
-            setCvv(value);
+            setCvv(numericValue);
         }
     };
 
