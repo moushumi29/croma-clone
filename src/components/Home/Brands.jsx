@@ -32,12 +32,11 @@ const Brands = () => {
       <h1>Top Brands</h1>
       <br/>
     <Carousel responsive={responsive}>
-    {brands.map((item)=>{
+    {brands.map((item, i)=>{
         return(
-          <NavLink to={`/brandPage/${item.brand}`}>
-            <div key={item.id} className='product-container' >
+          <NavLink to={`/brandPage/${item.brand}`} key={i}>
+            <div  className='product-container' >
                 <img src={item.url} alt='product' style={{height:"120px"}}/>
-                {/* <h4>{item.title}</h4> */}
             </div>
             </NavLink>
         )

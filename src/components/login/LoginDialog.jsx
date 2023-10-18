@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Dialog } from "@mui/material"
+import Dialog from '@mui/material/Dialog';
 import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { BiShow, BiHide } from "react-icons/bi";
 
 
 const LoginDialog = ({ open, setOpen }) => {
+
   const handleClose = () => {
     setOpen(false);
   }

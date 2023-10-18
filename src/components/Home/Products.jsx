@@ -36,8 +36,8 @@ const Products = () => {
         <Carousel responsive={responsive}>
         {products.map((item)=>{
             return(
-              <NavLink to={`/productList/${item.title}`}>
-                <div key={item.id} className='product-container' >
+              <NavLink to={`/productList/${item.title}`} key={item.id}>
+                <div  className='product-container' >
                     <img src={item.url} alt='product'/>
                 </div>
                 </NavLink>

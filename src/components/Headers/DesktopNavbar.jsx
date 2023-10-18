@@ -10,7 +10,7 @@ import { useFilterContext } from '../../context/filterContext';
 import { useNavigate } from 'react-router-dom';
 import { LogedInUser } from '../../App';
 import Menu from './Menu';
-import { Modal } from '@mui/material';
+import Modal from '@mui/material/Modal';
 import PincodeDialog from '../login/PincodeDialog';
 
 const DesktopNavbar = () => {
