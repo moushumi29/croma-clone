@@ -7,12 +7,12 @@ import { useNavigate } from 'react-router-dom';
 import { useFilterContext } from '../../context/filterContext';
 import LoginDialog from '../login/LoginDialog';
 import { LogedInUser } from '../../App';
-import Modal from '@mui/material/Modal';
+import { Modal } from '@mui/material';
 import Menu from './Menu';
 
 const MobileNavbar = () => {
-  const navigate = useNavigate();
   const { logedIn, setLogedIn, cartValue } = useContext(LogedInUser);
+  const navigate = useNavigate();
   if (sessionStorage.getItem('userInfo')) {
     setLogedIn(true);
   }
@@ -57,7 +57,7 @@ const MobileNavbar = () => {
           <div>
             <FaUser style={{ fontSize: "18px" }} onClick={openDialog} />
           </div>
-          <div className='cart'>
+          <div className='cart' onClick={()=> navigate('/cartPage')}>
             <FaShoppingCart style={{ fontSize: "18px" }} />
             <p>{cartValue}</p>
           </div>

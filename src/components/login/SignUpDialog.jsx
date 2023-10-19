@@ -94,7 +94,7 @@ const SignUpDialog = () => {
       <div className='signup-container'>
          <div style={{margin:"30px 0px"}}>Sign Up</div>
             <form>
-                <label >Please enter your Username, Email ID and Password</label>
+                <div>Please enter your Username, Email ID and Password</div>
                 <br/>
                 <input type='text' name='name' placeholder='Enter your name' onChange={handleOnChange} className='input-field' style={{backgroundColor:"#1d1d1d"}}/>
                 <br/>

@@ -90,7 +90,7 @@ body{
     color: black;
     font-size: 24px;
     position: absolute;
-    left: 50rem;
+    right: 25px;
    
 }
 .right-side{
@@ -542,19 +542,26 @@ body{
     font-weight: 600;
     margin-bottom: 20px;
 }
-.input-field{
+.input-div{
     border: 1px solid white;
     border-radius: 5px;
+    width: 350px;
+    padding: 10px 0px;
+    /* margin-top: 30px; */
+   text-align: center;
+   margin: 30px auto 0px;
+}
+.input-field{
+    width: 90%;
+    border: none;
     background-color: #111111;
     color: white;
-    padding: 15px 0px;
-    width: 350px;
-    margin-top: 30px;
-    padding-left: 10px;
+   
 }
 .input-field::placeholder{
     color: gray;
-    font-size: 18px;
+    font-size: 14px;
+    text-align: left;
 }
 .new-user{
     font-size: 14px;
@@ -565,7 +572,7 @@ body{
     color: #00e9bf;
 }
 .btn-login{
-    width: 350px;
+    width: 100%;
     background-color: #00e9bf;
     color: black;
     padding: 15px 0px;
@@ -578,8 +585,9 @@ body{
 }
 .hide{
     position: absolute;
-    right: 90px;
-    bottom: 175px;
+    top: 15px;
+    z-index: 200;
+    right: 18px;
 }
 .btn-login:hover{
     background-color: #03b695;
@@ -873,19 +881,16 @@ body{
     height: 350px;
 }
 
-@media screen and (max-width: 1024px){
+ @media screen and (max-width: 1024px) {
     .box{
         width: 100%;
         padding: 0px 12px;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .single-product-page{
-        display: grid;
-        grid-template-columns: 1fr;
-        /* width: 98%; */
-        padding:0px 20px;
-        overflow-x: hidden;
+        display: block;
+        padding:10px 20px;
     }
     .product-card{
         width: 180px;
@@ -917,7 +922,6 @@ body{
         height: 8rem;
     }
     .card-description-wrapper{
-        /* display: block; */
         width: 100%;
         font-size: 12px;
     }
@@ -940,6 +944,12 @@ body{
         flex-direction: column;
         margin-left: 150px;
     }
+    .input-div{
+        width: 220px;
+    }
+    .hide{
+        position: absolute;
+    }
     .total-price{
         margin-left: 35px;
     }
@@ -957,16 +967,16 @@ body{
         margin: 30px;
     }
     .my-profile-wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
+        display: block;
+    }
+    .my-profile-card{
+        margin-bottom: 10px;
     }
     .wishlist-wrapper{
         display: flex;
         flex-direction: column;
         margin: 20px;
         padding: 10px 20px;
-        /* padding: 20px; */
     }
     .description-wishlist{
         width: 100%;
@@ -984,7 +994,8 @@ body{
         margin: 0px 0px;
     }
     .checkout-page{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

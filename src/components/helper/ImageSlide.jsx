@@ -66,8 +66,8 @@ const ImageSlide = ({ img =[] , mainImage, _id}) => {
         {
             img.slice(0, 6).map((currImage, index)=>{
                 return (
-                    <figure >
-                        <img src={currImage} alt="product" className='image-feature' key={index} onClick={()=>setFocusedImage(currImage)}/>
+                    <figure key={index}>
+                        <img src={currImage} alt="product" className='image-feature'  onClick={()=>setFocusedImage(currImage)}/>
                     </figure>
                 )
             })

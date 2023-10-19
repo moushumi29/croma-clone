@@ -46,46 +46,46 @@ const LoginDialog = ({ open, setOpen }) => {
       // console.log("responseData", response);
       if (response.token) {
         toast.success(`Welcome ${(response.data.name).toUpperCase()}`,
-      {
-        theme: "dark",
-      });
-      handleClose();
+          {
+            theme: "dark",
+          });
+        handleClose();
         const accessToken = response.token;
         sessionStorage.setItem("authToken", accessToken);
         sessionStorage.setItem("userInfo", JSON.stringify(response.data));
       } else {
         toast.warning("Something went wrong",
-      {
-        theme: "dark",
-      })
+          {
+            theme: "dark",
+          })
       }
     }
     catch (err) {
-      
-        console.error("Error:", err);
-      
+
+      console.error("Error:", err);
+
     }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     const errorValues = Object.values(userInfo);
     const isEmptyVal = errorValues.some((el) => el === '');
-    const {email, password} = userInfo;
-    if(isEmptyVal){
+    const { email, password } = userInfo;
+    if (isEmptyVal) {
       setError("All Fields must be filled");
       setColor('red')
-    }else if(!email.includes('@gmail.com')){
+    } else if (!email.includes('@gmail.com')) {
       setEmailError("Email is invalid");
       setPasswordError('');
       setError("");
       setColor('red')
-    }else if(password.length < 4){
+    } else if (password.length < 4) {
       setError('');
       setEmailError('');
       setPasswordError("Password length must be greater than 4.");
       setColor('red');
     }
-    else{
+    else {
       setEmailError('');
       setPasswordError('');
       fetchLogin(userInfo)
@@ -96,25 +96,27 @@ const LoginDialog = ({ open, setOpen }) => {
       <Dialog open={open} onClose={handleClose}>
         <div className='login-container'>
           <div className='header-login'>LOGIN</div>
-          <form>
-            <label style={{fontSize:"16px"}}>Please enter your Email ID and Password</label>
-            <br />
-            <input type='email' name='email' placeholder='Enter your Email Id' onChange={handleOnChange} className='input-field'/>
-            <br />
-            {emailError && <p style={{color: color, fontSize:"14px"}}>{emailError}</p>}
-            <div style={{display:"flex", justifyContent:"space-between"}}>
-            <input  type={showPassword ? "text" : "password"} name="password" placeholder='Enter your Password' onChange={handleOnChange} className='input-field'/>
-            <span
-              className="hide"
-              style={{ cursor: "pointer"}}
-              onClick={handleShowPassword}
-            >
-              {showPassword ? <BiShow /> : <BiHide />}
-            </span>
+          <form action='#'>
+            <div style={{ fontSize: "16px" }} >Please enter your Email ID and Password</div>
+          
+            <div className='input-div'>
+            <input type='email' name='email' placeholder='Enter your Email Id' onChange={handleOnChange} className='input-field' />
             </div>
-           
-            {passwordError && <p style={{color: color, fontSize:"14px"}}>{passwordError}</p>}
-                {error && <p style={{color: color, fontSize:"14px"}}>{error}</p>}
+        
+            {emailError && <p style={{ color: color, fontSize: "14px" }}>{emailError}</p>}
+            <div style={{ position:"relative" }} className='input-div'>
+              <input type={showPassword ? "text" : "password"} name="password" placeholder='Enter your Password' onChange={handleOnChange} className='input-field' />
+              <span
+                className="hide"
+                style={{ cursor: "pointer" }}
+                onClick={handleShowPassword}
+              >
+                {showPassword ? <BiShow /> : <BiHide />}
+              </span>
+            </div>
+
+            {passwordError && <p style={{ color: color, fontSize: "14px" }}>{passwordError}</p>}
+            {error && <p style={{ color: color, fontSize: "14px" }}>{error}</p>}
             <p onClick={handleClose} className='new-user'>New to Croma? <NavLink to='/signUpPage'>Create account</NavLink></p>
             <button onClick={handleSubmit} className='btn-login'>Log In</button>
           </form>
