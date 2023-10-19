@@ -73,9 +73,8 @@ const DesktopNavbar = () => {
                                 onClick={clearInput}
                             // onBlur={clearInput}
                             />
-                            <CiSearch className='search-icon' />
                         </form>
-
+                        <CiSearch className='search-icon' />
                     </div>
                 </div>
                 <div className='right-side'>

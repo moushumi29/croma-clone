@@ -68,8 +68,9 @@ const MobileNavbar = () => {
           <form onSubmit={handleFormSubmit}>
             <input type='text' placeholder='What are you looking for ?' name="text" value={text}
               onChange={updateFilterValue} onClick={clearInput} />
-            <CiSearch className='search-icon' />
+            
           </form>
+          <CiSearch className='search-icon' style={{right:"28px", top:"42px"}}/>
         </div>
       </div>
       <LoginDialog open={open} setOpen={setOpen} />
