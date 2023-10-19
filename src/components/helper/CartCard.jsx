@@ -34,7 +34,13 @@ const CartCard = ({cart, setCartData, setTotalPrice }) => {
         const result = await res.json();
         setCartData(result.data.items)
         setTotalPrice(result.data.totalPrice)
-        setCartValue((prev) => prev-1)
+        setCartValue((prev) =>{
+          if(prev>1){
+            return prev-1;
+          }else{
+            return 0;
+          }
+        })
     }catch(err){
         console.log(err);
     }

@@ -108,7 +108,7 @@ const SinglePage = () => {
               <p>{sellerTag}</p>
             </div>
             <div className='rating'>{stars} <AiFillStar /></div>
-            <p className='offer-price'>&#8377; {formatIndianRupee(price)}</p>
+            <p className='offer-price'>&#8377; {price}</p>
             <p style={{ fontSize: "12px", borderBottom: "1px solid gray", paddingBottom: "4px" }}>(Inc. all Taxes)</p>
             <p className='mrp'>MRP: <span></span>
               <del className='real-price'>
