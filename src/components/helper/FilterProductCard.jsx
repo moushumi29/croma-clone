@@ -1,5 +1,5 @@
 import React from 'react'
-import { getRandomDecimal } from './RandomStars';
+import { formatIndianRupee, getRandomDecimal } from './RandomStars';
 import { AiFillStar } from 'react-icons/ai';
 import { FiHeart } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
@@ -22,11 +22,11 @@ const FilterProductCard = ({ product }) => {
                             <p>{sellerTag}</p>
                         </div>
                         <div className='rating'>{stars} <AiFillStar /></div>
-                        <p className='offer-price'>&#8377; {price}</p>
+                        <p className='offer-price'>&#8377; {formatIndianRupee(price)}</p>
                         <p style={{ fontSize: "12px", paddingBottom: "4px" }}>(Inc. all Taxes)</p>
                         <p className='mrp'>MRP: <span></span>
                             <del className='real-price'>
-                                &#8377; {price + 3999}</del>
+                                &#8377; {formatIndianRupee(price + 3999)}</del>
                             <span> (Save &#8377; 3,999)</span>
                         </p>
                         <div className='location'>

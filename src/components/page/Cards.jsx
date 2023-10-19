@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { AiFillStar } from 'react-icons/ai';
+import { formatIndianRupee } from '../helper/RandomStars';
 
 const Cards = ({product}) => {
     const {_id, displayImage, name, price } = product;
@@ -20,7 +21,7 @@ const Cards = ({product}) => {
        {/* <div className='heart'><FiHeart /></div> */}
       <img src={displayImage} alt='product' />
       <div className='product-name'>{productName.length > 50 ? `${productName.slice(0, 45)}...`: productName}</div>
-      <div className='product-price'>&#8377; {price}</div>
+      <div className='product-price'>&#8377; {formatIndianRupee(price)}</div>
       <div className='rating'>
         <AiFillStar/>
         <AiFillStar/>

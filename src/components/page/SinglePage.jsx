@@ -4,7 +4,7 @@ import { AiFillStar } from 'react-icons/ai'
 import Box from "../../Box"
 import ImageSlide from '../helper/ImageSlide'
 import HandleResponse from '../helper/HandleResponse'
-import { getRandomDecimal } from '../helper/RandomStars'
+import { formatIndianRupee, getRandomDecimal } from '../helper/RandomStars'
 import { toast } from 'react-toastify'
 import { LogedInUser } from '../../App'
 
@@ -108,11 +108,11 @@ const SinglePage = () => {
               <p>{sellerTag}</p>
             </div>
             <div className='rating'>{stars} <AiFillStar /></div>
-            <p className='offer-price'>&#8377; {price}</p>
+            <p className='offer-price'>&#8377; {formatIndianRupee(price)}</p>
             <p style={{ fontSize: "12px", borderBottom: "1px solid gray", paddingBottom: "4px" }}>(Inc. all Taxes)</p>
             <p className='mrp'>MRP: <span></span>
               <del className='real-price'>
-                &#8377; {price + 3000}</del>
+                &#8377; {formatIndianRupee(price + 3000)}</del>
               <span> (Save &#8377; 3,000)</span>
             </p>
             <div className='features'>
