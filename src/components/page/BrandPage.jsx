@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Box from '../../Box'
-import Cards from './Cards';
+import Cards from '../helper/Cards';
 
 const BrandPage = () => {
   document.body.style.backgroundColor = "#191919";

@@ -42,10 +42,14 @@ const PincodeDialog = ({ open, setOpen }) => {
          <div style={{fontSize:"20px"}}>SELECT YOUR LOCATION</div>
          <div style={{fontSize:"16px", marginTop:"10px"}}>To Check Products & Delivery Options available at your location</div>
          <form>
+          <div className='input-div'>
          <input type='text' name='pincode' placeholder='Enter Pincode' className='input-field' onChange={handleOnChange}/>
-         <br/>
+         </div>
+         <div className='input-div'>
+
+        
          <input type='text' name='state' placeholder='Enter your state' className='input-field' onChange={handleOnChange}/>
-         <br/>
+         </div>
          {error && <p style={{color:"red", fontSize:"14px"}}>{error}</p>}
          <button className='btn-login' onClick={handleSubmit}>Continue</button>
          </form>

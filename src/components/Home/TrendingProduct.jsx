@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Box from '../../Box';
-import Cards from '../page/Cards';
+import Cards from '../helper/Cards';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Box from '../../Box'
 import banner from "../../assests/products-banner.jpg"
-import Cards from './Cards';
+import Cards from '../helper/Cards';
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);

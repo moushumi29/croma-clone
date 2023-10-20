@@ -92,17 +92,19 @@ const SignUpDialog = () => {
    
      
       <div className='signup-container'>
-         <div style={{margin:"30px 0px"}}>Sign Up</div>
+         <div style={{margin:"30px 0px", fontSize:"20px"}}>SIGN UP</div>
             <form>
                 <div>Please enter your Username, Email ID and Password</div>
-                <br/>
+                <div className='input-div'>
                 <input type='text' name='name' placeholder='Enter your name' onChange={handleOnChange} className='input-field' style={{backgroundColor:"#1d1d1d"}}/>
-                <br/>
+                </div>
+                <div className='input-div'>
                 <input type='email' name='email' placeholder='Enter your Email Id' onChange={handleOnChange} className='input-field' style={{backgroundColor:"#1d1d1d"}}/>
-                <br/>
+                </div>
                 {emailError && <p style={{color: color, fontSize:"14px"}}>{emailError}</p>}
+                <div className='input-div'>
                 <input type='password' name="password" placeholder='Enter your Password' onChange={handleOnChange} className='input-field' style={{backgroundColor:"#1d1d1d"}}/>
-                <br/>
+                </div>
                 {passwordError && <p style={{color: color, fontSize:"14px"}}>{passwordError}</p>}
                 {error && <p style={{color: color, fontSize:"14px"}}>{error}</p>}
                 <button onClick={handleSubmit} className='btn-login'>Sign Up</button>

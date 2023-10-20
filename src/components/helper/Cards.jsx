@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { AiFillStar } from 'react-icons/ai';
-import { formatIndianRupee } from '../helper/RandomStars';
+import { formatIndianRupee } from './RandomStars';
 
 const Cards = ({product}) => {
     const {_id, displayImage, name, price } = product;
