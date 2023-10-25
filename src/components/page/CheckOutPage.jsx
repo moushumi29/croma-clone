@@ -231,6 +231,7 @@ const CheckOutPage = () => {
                                     placeholder='0000-0000-0000-0000'
                                     onChange={handleInputChange}
                                     className='input-checkout'
+                                    maxLength={19}
                                 />
                                 {errors.cardNumber && <div className="error">{errors.cardNumber}</div>}
                             </div>
@@ -244,12 +245,13 @@ const CheckOutPage = () => {
                                     value={expiryDate}
                                     onChange={handleInputChange}
                                     className='input-checkout'
+                                    maxLength={5}
                                 />
                                 {errors.expiryDate && <div className="error">{errors.expiryDate}</div>}
                             </div>
                             <div>
                                 <label htmlFor="cvv" className='label-checkout'>CVV:</label>
-                                <input type="text" id="cvv" placeholder="000" name="cvv" value={cvv} onChange={handleInputChange} className='input-checkout' />
+                                <input type="text" id="cvv" placeholder="000" name="cvv" value={cvv} onChange={handleInputChange} className='input-checkout' maxLength={3}/>
                                 {errors.cvv && <div className="error">{errors.cvv}</div>}
                             </div>
                             <button className='checkout-btn' type="submit" onClick={handleBuyNow}>Pay Now</button>

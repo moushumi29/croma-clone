@@ -27,18 +27,12 @@ const CartPage = () => {
             })
             const result = await res.json();
             setCartData(result.data.items)
-            // sessionStorage.setItem("cart-value", result.data.items.length)
             setTotalPrice(result.data.totalPrice)
-            console.log(result.data)
-            // console.log("Total Price", result.data.totalPrice)
         }
         catch (err) {
             console.log(err);
         }
     }
-
-
-
 
     useEffect(() => {
         fetchCartItems();
