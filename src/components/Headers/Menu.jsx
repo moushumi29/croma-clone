@@ -23,7 +23,7 @@ const Menu = () => {
   return (
     <Box sx={{ borderRadius: '4px', width: '340px', backgroundColor: 'black' }}>
       <Box sx={{ py: '10px' }}>
-        <Box sx={{ backgroundColor: 'black', width: '100%', p: '10px 20px', fontWeight: "700", fontSize: "20px" }}>
+        <Box sx={{ backgroundColor: 'black', width: '100%', p: '10px 20px', fontWeight: "700", fontSize: "20px", color:"white" }}>
           Shop by Category
         </Box>
         <Box>
