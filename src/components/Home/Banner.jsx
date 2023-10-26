@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { desktopbanner, mobileBammer } from '../../data/data';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -47,17 +48,21 @@ const Banner = () => {
       itemClass="carousel-item-padding-40-px">
       {matches && desktopbanner.map((item) => {
         return (
-          <div key={item.id} className='banner-img'>
+          <NavLink key={item.id} to={`/subCategory/${item.title}`}>
+          <div className='banner-img'>
             <img src={item.url} alt='banner' />
           </div>
+          </NavLink>
         )
       })}
 
       {!matches && mobileBammer.map((item) => {
         return (
-          <div key={item.id} className='mobile-banner-img'>
+          <NavLink key={item.id} to={`/subCategory/${item.title}`}>
+            <div className='mobile-banner-img'>
             <img src={item.url} alt='banner' />
           </div>
+          </NavLink>
         )
       })}
     </Carousel>

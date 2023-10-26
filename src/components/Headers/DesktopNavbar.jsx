@@ -85,7 +85,7 @@ const DesktopNavbar = () => {
 
                         <IoPencil style={{ fontSize: "12px" }} />
                     </div>
-                    <div>
+                    <div style={{cursor:"pointer"}}>
                         <FaUser style={{ fontSize: "22px" }} onClick={openDialog} />
                     </div>
                     <div className='cart'>

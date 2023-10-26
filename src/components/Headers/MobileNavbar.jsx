@@ -54,7 +54,7 @@ const MobileNavbar = () => {
           </div>
         </div>
         <div className="right-side-mobile">
-          <div>
+          <div style={{cursor:"pointer"}}>
             <FaUser style={{ fontSize: "18px" }} onClick={openDialog} />
           </div>
           <div className='cart' onClick={()=> navigate('/cartPage')}>
